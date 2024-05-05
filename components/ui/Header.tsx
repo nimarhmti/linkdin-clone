@@ -1,4 +1,10 @@
-import { SearchIcon } from "lucide-react";
+import {
+  Briefcase,
+  HomeIcon,
+  MessagesSquare,
+  SearchIcon,
+  UsersIcon,
+} from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
