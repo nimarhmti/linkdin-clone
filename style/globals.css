@@ -12,7 +12,7 @@
   }
 
   .icon p {
-    @apply text-gray-400 text-xs;
+    @apply text-gray-500 text-xs;
   }
 
   .postButton {

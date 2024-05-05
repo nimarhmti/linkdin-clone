@@ -1,12 +1,12 @@
-import {
-  Briefcase,
-  HomeIcon,
-  MessagesSquare,
-  SearchIcon,
-  UsersIcon,
-} from "lucide-react";
+import { Routes } from "@/routes/NavRoutes";
+import { routesModel } from "@/routes/routesdetails";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SearchIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { Button } from "./button";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
@@ -27,6 +27,23 @@ export default function Header() {
             placeholder="search"
           />
         </form>
+      </div>
+      <div className="flex items-center space-x-4 px-6">
+        {Routes.map((Route: routesModel) => (
+          <Link href="/" className={cn(Route.style)} key={Route.href}>
+            <Route.icon className="h-5" />
+            <p>{Route.label}</p>
+          </Link>
+        ))}
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+        <SignedOut>
+          <Button asChild variant="secondary">
+            <SignInButton />
+          </Button>
+        </SignedOut>
       </div>
     </div>
   );
