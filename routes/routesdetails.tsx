@@ -28,13 +28,13 @@ export class routesDetails {
     href: "/network",
     icon: UsersIcon,
     label: "Network",
-    style: "icon hidden md:flex",
+    style: "hidden icon  md:flex",
   };
   Job: routesModel = {
     href: "/jobs",
     icon: Briefcase,
     label: "Jobs",
-    style: "icon hidden md:flex",
+    style: "hidden icon  md:flex",
   };
   Message: routesModel = {
     href: "/message",

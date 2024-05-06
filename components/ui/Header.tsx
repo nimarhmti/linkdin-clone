@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
-    <div className="flex items-center p-2 max-w-6xl mx-auto">
+    <div className="flex items-center p-2 max-w-6xl mx-auto ">
       <Image
         className="rounded-lg"
         src="https://links.papareact.com/b3z"
@@ -30,13 +30,13 @@ export default function Header() {
       </div>
       <div className="flex items-center space-x-4 px-6">
         {Routes.map((Route: routesModel) => (
-          <Link href="/" className={cn(Route.style)} key={Route.href}>
+          <Link href="/" className={Route.style} key={Route.href}>
             <Route.icon className="h-5" />
             <p>{Route.label}</p>
           </Link>
         ))}
         <SignedIn>
-          <UserButton />
+          <UserButton afterSignOutUrl="/sign-in" />
         </SignedIn>
 
         <SignedOut>

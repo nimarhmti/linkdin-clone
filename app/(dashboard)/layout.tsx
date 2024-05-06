@@ -5,11 +5,11 @@ interface Props {
 }
 export default function DashboardLayout({ children }: Props) {
   return (
-    <main className="min-h-screen">
-      <div className="sticky top-0">
+    <main className="min-h-screen bg-mainBgColor">
+      <div className="sticky top-0 bg-white shadow-md">
         <Header />
       </div>
-      <div className="flex flex-1 w-full bg-red-200">{children}</div>
+      <div className="p-2 max-w-6xl mx-auto">{children}</div>
     </main>
   );
 }
