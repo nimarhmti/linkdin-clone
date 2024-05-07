@@ -1,4 +1,5 @@
 "use client";
+import { createPostAction } from "@/Actions/createPostAction";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
@@ -31,14 +32,7 @@ export default function Form() {
   };
   return (
     <div className="bg-white p-2 rounded-lg">
-      <form
-        ref={ref}
-        action={(formdata) => {
-          //use server action for submission
-          handlePostAction(formdata);
-        }}
-        className="space-y-3"
-      >
+      <form ref={ref} action={createPostAction} className="space-y-3">
         <div className="flex items-center space-x-2">
           <Avatar>
             <AvatarImage src={user?.imageUrl} />
