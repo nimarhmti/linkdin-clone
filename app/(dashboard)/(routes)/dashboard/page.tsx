@@ -1,6 +1,7 @@
 import Header from "@/components/ui/Header";
 import React from "react";
 import UserInformation from "./_components/userInformation/UserInformation";
+import Form from "./_components/postForm/Form";
 
 export default function Dashboard() {
   return (
@@ -8,8 +9,8 @@ export default function Dashboard() {
       <section className=" hidden md:inline md:col-span-2">
         <UserInformation />
       </section>
-      <section className="bg-red-200 col-span-full md:col-span-6 xl:col-span-4 xl:max-w-xl mx-auto w-full">
-        teset
+      <section className="col-span-full md:col-span-6 xl:col-span-4 xl:max-w-xl mx-auto w-full">
+        <Form />
       </section>
       <section className="hidden bg-green-300 xl:inline xl:col-span-2">
         teset01
